@@ -203,8 +203,20 @@ while True:
                 except ValueError:
                     print("ERRO NO VALOR")
             case "bin()":
-                binario = str(input("Digite um texto: "))
-                conversão = bin(binario)
+                try:
+                    binario = int(input("Digite o numero: "))
+                    conversão = bin(binario)
+                    print(f"Texto: {binario}")
+                    print(f"Conversão: {conversão}")
+                    definir_b = str(input("Quer definir como uma variavel(s,n)? ")).strip().lower()
+                    if definir_b == "s":
+                        nome_b = str(input("Digite o nome da variavel: "))
+                        variaveis.append(f"{nome_b} = {conversão}")
+                        print("Variaveis:")
+                        for num,conversão in enumerate(variaveis, start=1):
+                            print(f"{num} - {conversão}")
+                except ValueError:
+                    print("ERRO NO VALOR")
             case "help()":
                 print("add() para adicionar uma variavel")
                 print("remove() para remover uma variavel")
