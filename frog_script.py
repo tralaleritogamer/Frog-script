@@ -141,6 +141,8 @@ while True:
                             print(f"O tipo da variavel '{qual}' e int(numeros inteiros)")
                         elif tipo_item == float:
                             print(f"O tipo da variavel '{qual}' e float(numeros decimais)")
+                        elif tipo_item == bin:
+                            print(f"O tipo da variavel '{qual}' e binario")
                         else:
                             print("ERRO")
                         print(f"Tipo: {tipo_item}")
